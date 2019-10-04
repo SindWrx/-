@@ -17,6 +17,8 @@ const gulpIf = require('gulp-if');
 const sourcemaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin');
 const svgSprite = require('gulp-svg-sprite');
+const spritesmith = require('gulp.spritesmith');
+const merge = require('merge-stream');
 const	svgmin = require('gulp-svgmin');
 const	cheerio = require('gulp-cheerio');
 const	replace = require('gulp-replace');
@@ -57,17 +59,20 @@ var settings = {
   offset: '30px', /* gutter width px || % || rem */
   mobileFirst: false, /* mobileFirst ? 'min-width' : 'max-width' */
   container: {
-      maxWidth: '1170px', /* max-width оn very large screen */
-      fields: '0px' /* side fields */
+      maxWidth: '1200px', /* max-width оn very large screen */
+      fields: '15px' /* side fields */
   },
   breakPoints: {
+      lg: {
+        width: '970px',
+        fields: '15px' /* set fields only if you want to change container.fields */
+      },
       md: {
           width: '768px',
           fields: '15px' /* set fields only if you want to change container.fields */
       },
       xs: {
-          width: '320px',
-          columns: 4,
+          width: '425px',
           fields: '15px'
       }
       /* 
@@ -129,14 +134,15 @@ gulp.task('images', () => {
   .pipe(browserSync.stream());
 });
 
-gulp.task('createMySprite', () => {
+
+/* Спрайты */
+gulp.task('createSvgSprite', () => {
   return gulp.src('./src/resources/icons/*.svg')
   .pipe(svgmin({
     js2svg: {
       pretty: true
     }
   }))
-  // Удалить все атрибуты all fill, style и stroke в svg тегах
   .pipe(cheerio({
     run: function ($) {
       $('[fill]').removeAttr('fill');
@@ -145,21 +151,38 @@ gulp.task('createMySprite', () => {
     },
     parserOptions: {xmlMode: true}
   }))
-  // Решаем проблему плагина cheerio. Он заменяет символами '&gt;' вот этот символ '>'. Заменяем обратно.
   .pipe(replace('&gt;', '>'))
-  // Собираем SVG спрайт
   .pipe(svgSprite({
     mode: {
       symbol: { dest: '.', sprite: './resources/images/sprite.svg', inline: true },
-      // css: {
-      //   dest: '.', prefix: '@mixin %s', sprite: './resources/images/spriteBg.svg', bust: false, dimensions: true,
-      //   render: { scss: { dest: 'sprite.scss' } }
-      // }
+      /* css: {
+        dest: '.', prefix: '@mixin %s', sprite: './resources/images/spriteBg.svg', bust: false, dimensions: true,
+        render: { scss: { dest: 'sprite.scss' } }
+      } */
     }
   }))
   .pipe(gulpIf('*.scss', gulp.dest('./src'), gulp.dest(conf.dest + '/')))
   .pipe(browserSync.stream());
 });
+
+gulp.task('createSprite', function () {
+  let spriteData = gulp.src('./src/resources/icons/*.png')
+  .pipe(spritesmith({
+    imgName: 'sprite.png',
+    imgPath: './resources/images/sprite.png',
+    cssName: 'sprite.scss',
+    padding: 5
+  }));
+  
+  let imgStream = spriteData.img
+    .pipe(gulp.dest('./public/resources/images'));
+
+  let cssStream = spriteData.css
+    .pipe(gulp.dest('./src'));
+  
+  return merge(imgStream, cssStream);
+});
+
 
 gulp.task('fontawesome', () => {
   return gulp.src('node_modules/@fortawesome/fontawesome-free/sprites/{brands,solid}.svg')
@@ -167,7 +190,7 @@ gulp.task('fontawesome', () => {
 });
 
 gulp.task('fonts', () => {
-  return gulp.src('./src/fonts/*.*')
+  return gulp.src('./src/fonts/**/*.*')
       .pipe(gulp.dest(conf.dest+'/fonts/'));
 });
 
@@ -190,5 +213,5 @@ gulp.task('clean', () => {
   return del([conf.dest + '/*']);
 });
 
-gulp.task('build',  gulp.series('clean', 'fontawesome', 'fonts', 'createMySprite', gulp.parallel('styles', 'scripts', 'pugs', 'images') ));
+gulp.task('build',  gulp.series('clean', 'fontawesome', 'fonts', 'createSvgSprite', gulp.parallel('styles', 'scripts', 'pugs', 'images') ));
 gulp.task('dev', gulp.series('build', 'watch'));

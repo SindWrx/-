@@ -8,6 +8,375 @@
     <link rel="stylesheet" href="./all.css"/>
   </head>
   <body>
+    <div class="wrapper-full">
+      <header class="header">
+        <div class="header-row">
+          <div class="main-menu"><a class="main-menu__link" href="">Оптовикам</a><a class="main-menu__link" href="">Доставка</a><a class="main-menu__link" href="">Как купить</a><a class="main-menu__link" href="">Контакты</a></div>
+          <div class="mobile-main-menu">
+            <div class="menu__icon"><span></span><span></span><span></span></div>
+            <div class="mobile-main-menu__body"><a class="mobile-main-menu__link" href="">Оптовикам</a><a class="mobile-main-menu__link" href="">Доставка</a><a class="mobile-main-menu__link" href="">Как купить</a><a class="mobile-main-menu__link" href="">Контакты</a></div>
+          </div>
+          <div class="social"><a class="social__link">
+              <svg class="social__icon social__icon_instagram">
+                <use href="./resources/images/brands.svg#instagram"></use>
+              </svg>
+              <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+                <lineargradient id="insta-gradient" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#AA65D5"></stop>
+                  <stop offset="50%" stop-color="#FB3784"></stop>
+                  <stop offset="100%" stop-color="#FF7847"></stop>
+                </lineargradient>
+              </svg></a><a class="social__link">
+              <svg class="social__icon social__icon_viber">
+                <use href="./resources/images/brands.svg#viber"></use>
+              </svg></a><a class="social__link">
+              <svg class="social__icon social__icon_whatsapp">
+                <use href="./resources/images/brands.svg#whatsapp"></use>
+              </svg></a></div>
+          <form class="search" action="">
+            <input class="search__field" type="search" name="search" placeholder="Поиск..."/>
+            <button class="search__button" type="submit">
+              <svg class="search__icon">
+                <use href="./resources/images/sprite.svg#search"></use>
+              </svg>
+            </button>
+          </form>
+          <div class="cart">
+            <div class="cart__icon-box">
+              <p class="cart__counter">0</p>
+              <svg class="cart__icon">
+                <use href="./resources/images/sprite.svg#cart"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="cart-empty">
+            <div class="close-block">
+              <p class="close-block__line"></p>
+              <p class="close-block__line"></p>
+            </div>
+            <div class="cart-empty__data">К сожалению, ваша корзина пуста. Нажмите “перейти к каталогу” и заказывайте нужные вам товары.</div><a class="button">Перейти к каталогу</a>
+          </div>
+          <div class="cart-full">
+            <div class="close-block">
+              <p class="close-block__line"></p>
+              <p class="close-block__line"></p>
+            </div>
+            <div class="cart-full__title">Моя корзина</div>
+            <div class="cart-items">
+              <div class="cart-item">
+                <div class="cart-item__data">
+                  <div class="cart-item__name">Сальник 15х20х6</div>
+                  <div class="cart-item__price">1200тг  х  1шт.</div>
+                </div>
+                <svg class="cart-item__delete">
+                  <use href="./resources/images/sprite.svg#delete"> </use>
+                </svg>
+              </div>
+              <div class="cart-item">
+                <div class="cart-item__data">
+                  <div class="cart-item__name">Сальник 15х20х6</div>
+                  <div class="cart-item__price">1200тг  х  1шт.</div>
+                </div>
+                <svg class="cart-item__delete">
+                  <use href="./resources/images/sprite.svg#delete"> </use>
+                </svg>
+              </div>
+            </div>
+            <hr class="cart-full__line"/>
+            <div class="cart-full__count">Товаров в корзине: 4 шт.  </div>
+            <div class="cart-full__total">Сумма заказа: 4800тг.  </div>
+            <hr class="cart-full__line"/><a class="button">Перейти в корзину</a>
+          </div>
+        </div>
+        <div class="header-row">
+          <svg class="logo">
+            <use href="./resources/images/sprite.svg#logo"></use>
+          </svg>
+          <div class="phones">
+            <svg class="phones__icon">
+              <use href="./resources/images/sprite.svg#phone"></use>
+            </svg>
+            <div class="phones__data">+7-702-345-49-69 <br/>+7-701-492-26-04</div>
+          </div>
+          <div class="worktime">
+            <svg class="worktime__icon">
+              <use href="./resources/images/sprite.svg#time"></use>
+            </svg>
+            <div class="worktime__data">Пн-Сб 9:00-17:00<br/>Вс - Вых.</div>
+          </div>
+          <div class="place">
+            <svg class="place__icon">
+              <use href="./resources/images/sprite.svg#place"></use>
+            </svg>
+            <div class="place__data">ул. Волочаевская 5/6 <br/>авторынок “Орбита”</div>
+          </div>
+          <div class="catalog">
+            <div class="catalog__data">Каталог</div>
+            <div class="catalog__icon"><span></span><span></span><span></span></div>
+          </div>
+          <div class="catalog-window">
+            <div class="close-block">
+              <p class="close-block__line"></p>
+              <p class="close-block__line"></p>
+            </div>
+            <div class="catalog-window__title">Каталог</div>
+            <div class="catalog-window__item">
+              <div class="catalog-category" href="">
+                <div class="catalog-category__title">Сальники</div>
+                <div class="icon-arrow"><span class="icon-arrow__line"></span><span class="icon-arrow__line"> </span></div>
+              </div>
+              <div class="catalog-subcategories"><a class="catalog-subcategories__item">Lorem ipsum</a><a class="catalog-subcategories__item">Lorem ipsum dolor</a><a class="catalog-subcategories__item">Lorem</a></div>
+              <hr class="catalog__line"/>
+              <div class="catalog-category" href="">
+                <div class="catalog-category__title">гидравлические уплотнения (манжеты)</div>
+                <div class="icon-arrow"><span class="icon-arrow__line"></span><span class="icon-arrow__line"></span></div>
+              </div>
+              <div class="catalog-subcategories"><a class="catalog-subcategories__item">манжеты полиуретан</a><a class="catalog-subcategories__item">манжеты резиновые</a><a class="catalog-subcategories__item">манжеты шевронные</a><a class="catalog-subcategories__item">манжеты полиуретан</a><a class="catalog-subcategories__item">манжеты резиновые</a><a class="catalog-subcategories__item">манжеты шевронные</a></div>
+              <hr class="catalog__line"/>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="slider">
+        <div class="slider__title"> <span>Широкий </span>
+          <div>ассортимент</div>
+        </div>
+        <div class="slider__item visible"><img class="slider__item-img" src="./resources/images/slide1.jpg"/></div>
+        <div class="slider__title"> <span>Широкий </span>
+          <div>ассортимент</div>
+        </div>
+        <div class="slider__item"><img class="slider__item-img" src="./resources/images/delivery.jpg"/></div>
+        <div class="slider__title"> <span>Широкий </span>
+          <div>ассортимент</div>
+        </div>
+        <div class="slider__item"><img class="slider__item-img" src="./resources/images/slide1.jpg"/></div>
+        <div class="slider__title"> <span>Широкий </span>
+          <div>ассортимент</div>
+        </div>
+        <div class="slider__item"><img class="slider__item-img" src="./resources/images/delivery.jpg"/></div>
+        <div class="slider__dots"></div>
+      </div>
+      <div class="products">
+        <h3 class="products__title">Популярные товары</h3>
+        <div class="products__layout">
+          <div class="mini-slider">
+            <div class="mini-slider__item visible">
+              <div class="mini-slider__content">
+                <div class="mini-slider__title">Ремни клиновые</div>
+                <div class="mini-slider__button">Подробнее</div>
+              </div><img class="mini-slider__item-img" src="./resources/images/mini.jpg"/>
+            </div>
+            <div class="mini-slider__item">
+              <div class="mini-slider__content">
+                <div class="mini-slider__title">Ремни клиновые</div>
+                <div class="mini-slider__button">Подробнее</div>
+              </div><img class="mini-slider__item-img" src="./resources/images/mini.jpg"/>
+            </div>
+            <div class="mini-slider__item">
+              <div class="mini-slider__content">
+                <div class="mini-slider__title">Ремни клиновые</div>
+                <div class="mini-slider__button">Подробнее</div>
+              </div><img class="mini-slider__item-img" src="./resources/images/mini.jpg"/>
+            </div>
+            <div class="mini-slider__item">
+              <div class="mini-slider__content">
+                <div class="mini-slider__title">Ремни клиновые</div>
+                <div class="mini-slider__button">Подробнее</div>
+              </div><img class="mini-slider__item-img" src="./resources/images/mini.jpg"/>
+            </div>
+            <div class="mini-slider__dots"></div>
+          </div>
+          <div class="products__layoutBox">
+            <div class="product-one__item">
+              <div class="product-one__img"><img src="./resources/images/salniks.jpg"/></div>
+              <div class="product-one__content">
+                <div class="product-one__title">Сальники</div>
+                <div class="product-one__button">Подробнее</div>
+              </div>
+            </div>
+            <div class="product-one__item">
+              <div class="product-one__img"><img src="./resources/images/patrub.jpg"/></div>
+              <div class="product-one__content">
+                <div class="product-one__title">Патрубки</div>
+                <div class="product-one__button">Подробнее</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="preim-outer">
+        <div class="preim">
+          <h3 class="preim__title">Наши преимущества</h3>
+          <div class="preim-row">
+            <div class="iconBox">
+              <div class="iconBlock">
+                <svg class="iconBlock__icon">
+                  <use href="./resources/images/sprite.svg#low-price"></use>
+                </svg>
+                <div class="iconBlock__text">лучшая цена</div>
+              </div>
+              <div class="iconBlock">
+                <svg class="iconBlock__icon">
+                  <use href="./resources/images/sprite.svg#assortment"></use>
+                </svg>
+                <div class="iconBlock__text">огромный ассортимент</div>
+              </div>
+              <div class="iconBlock">
+                <svg class="iconBlock__icon">
+                  <use href="./resources/images/sprite.svg#diamond"></use>
+                </svg>
+                <div class="iconBlock__text">лучшее качество</div>
+              </div>
+              <div class="iconBlock">
+                <svg class="iconBlock__icon">
+                  <use href="./resources/images/sprite.svg#quick"></use>
+                </svg>
+                <div class="iconBlock__text">БЫСТРАЯ ОТПРАВКА</div>
+              </div>
+              <div class="iconBlock">
+                <svg class="iconBlock__icon">
+                  <use href="./resources/images/sprite.svg#percent"></use>
+                </svg>
+                <div class="iconBlock__text">СКИДКИ 5%-30%</div>
+              </div>
+              <div class="iconBlock">
+                <svg class="iconBlock__icon">
+                  <use href="./resources/images/sprite.svg#delivery-truck"></use>
+                </svg>
+                <div class="iconBlock__text">ДОСТАВКА ПО СНГ</div>
+              </div>
+            </div>
+            <div class="preimBox">
+              <h3 class="preimBox__title">Самые низкие цены - Товар напрямую от поставщика!</h3>
+              <div class="preimBox__text">Вся наша продукция изготавливается ведущими заводами-производителями стран СНГ и зарубежными фабриками. Наши цены, даже с наценкой, зачастую намного иже, чем цены наших конкурентов, благодаря многолетним дружественным отношениям с руководством наших поставщиков.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="howToBuy">
+        <h3 class="howToBuy__title">Как купить</h3>
+        <div class="howToBuy-row">
+          <div class="order">
+            <div class="orderBox">
+              <div class="orderBox__number">1</div>
+              <div class="orderBox__text">Выбрать нужный товар, перейдя к нему через каталог в левой части сайта, выбрав его в одной из категорий в центральной части сайта, открыв каталог, кликнув по кнопке «каталог» в нижней части сайта либо найдя товар через поисковик.</div>
+            </div>
+            <div class="orderBox">
+              <div class="orderBox__number">2</div>
+              <div class="orderBox__text">Указать нужное количество товара, которое вы хотите приобрести.</div>
+            </div>
+            <div class="orderBox">
+              <div class="orderBox__number">3</div>
+              <div class="orderBox__text">Нажать кнопку «В корзину»</div>
+            </div>
+            <div class="orderBox">
+              <div class="orderBox__number">4</div>
+              <div class="orderBox__text">Если требуется купить еще 1 и более товаров, то повторить процедуру.</div>
+            </div>
+            <div class="orderBox">
+              <div class="orderBox__number">5</div>
+              <div class="orderBox__text">Перейти в «Корзину» в верхней части сайта, проверить выбранные товары и их количество.</div>
+            </div>
+            <div class="orderBox">
+              <div class="orderBox__number">6</div>
+              <div class="orderBox__text">Нажмите кнопку «Подтвердить», заполните данные в появившемся окне.</div>
+            </div>
+            <div class="orderBox">
+              <div class="orderBox__number">7</div>
+              <div class="orderBox__text">Нажмите «Заказать». Готово. <br/>Далее мы с Вами свяжемся чтобы подтвердить Вашу покупку с нашей стороны.</div>
+            </div>
+          </div>
+          <svg class="question">
+            <use href="./resources/images/sprite.svg#question-mark"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="deliveryBg">
+        <div class="delivery">
+          <h3 class="delivery__title">Доставка</h3>
+          <div class="deliveryBox">
+            <div class="deliveryBox__content">
+              <h4 class="deliveryBox__title">Доставка по Караганде :</h4>
+              <p class="deliveryBox__text">Вы можете заказать доставку курьером или забрать товар лично в нашем магазине. <br/><span>Цена доставки курьером : от 1000тг. </span><br/>Акция : при заказе товаров на сумму от <span>20 000 </span>тг доставка осуществляется <span>бесплатно</span></p>
+            </div>
+            <svg class="deliveryBox__icon">
+              <use href="./resources/images/sprite.svg#box"></use>
+            </svg>
+          </div>
+          <div class="deliveryBox">
+            <div class="deliveryBox__content">
+              <h4 class="deliveryBox__title">Доставка почтой или ТК (Казахстан , Россия , Белорусь) :</h4>
+              <p class="deliveryBox__text">Вы можете выбрать для себя наиболее удобный способ доставки, товары отправляются из города Караганда. </p>
+            </div>
+            <svg class="deliveryBox__icon">
+              <use href="./resources/images/sprite.svg#box"></use>
+            </svg>
+          </div>
+          <div class="deliveryBox">
+            <div class="deliveryBox__content">
+              <h4 class="deliveryBox__title">Почта Казахстана :</h4>
+              <p class="deliveryBox__text">Рассчитать контрольные сроки доставки и стоимость (наш индекс <span>100022</span>), <br/>отследить посылку (<span>post.kz</span>)</p>
+            </div>
+            <svg class="deliveryBox__icon">
+              <use href="./resources/images/sprite.svg#box"></use>
+            </svg>
+          </div>
+          <div class="deliveryBox">
+            <div class="deliveryBox__content">
+              <h4 class="deliveryBox__title">СДЭК (доставка до двери) :</h4>
+              <p class="deliveryBox__text">Международная компания с низкими ценами и высокими стандартами качества. Рассчитать контрольные сроки доставки и стоимость (<span>cdek.kz</span>)</p>
+            </div>
+            <svg class="deliveryBox__icon">
+              <use href="./resources/images/sprite.svg#box"></use>
+            </svg>
+          </div>
+          <div class="deliveryBox">
+            <div class="deliveryBox__content">
+              <h4 class="deliveryBox__title">DHL EXPRESS :</h4>
+              <p class="deliveryBox__text">Мировой лидер в области почтовых и логистических услуг, рассчитать контрольные сроки доставки и стоимость (<span>dct.dhl.com</span>)</p>
+            </div>
+            <svg class="deliveryBox__icon">
+              <use href="./resources/images/sprite.svg#box"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footerInner">  
+          <div class="footer-row">
+            <div class="footer-main-menu"><a class="footer-main-menu__link" href="">Оптовикам</a><a class="footer-main-menu__link" href="">Доставка</a><a class="footer-main-menu__link" href="">Как купить</a><a class="footer-main-menu__link" href="">Контакты</a></div>
+            <div class="footer-data">
+              <div class="footer-phones">
+                <svg class="footer-phones__icon">
+                  <use href="./resources/images/sprite.svg#phone"></use>
+                </svg>
+                <div class="phones__data">+7-702-345-49-69 +7-701-492-26-04</div>
+              </div>
+              <div class="footer-place">
+                <svg class="footer-place__icon">
+                  <use href="./resources/images/sprite.svg#place"></use>
+                </svg>
+                <div class="place__data">ул. Волочаевская 5/6 авторынок “Орбита” <br/>Пн-Сб 9:00-17:00 Вс - Вых.</div>
+              </div>
+            </div>
+            <div class="footerMap-box"><img class="footer-map" src="./resources/images/map.jpg"/></div>
+          </div>
+          <div class="footer-social"><a class="footer-social__link">
+              <svg class="footer-social__icon footer-social__icon_instagram">
+                <use href="./resources/images/brands.svg#instagram"></use>
+              </svg></a><a class="footer-social__link">
+              <svg class="footer-social__icon footer-social__icon_viber">
+                <use href="./resources/images/brands.svg#viber"></use>
+              </svg></a><a class="footer-social__link">
+              <svg class="footer-social__icon footer-social__icon_whatsapp">
+                <use href="./resources/images/brands.svg#whatsapp"></use>
+              </svg></a></div>
+        </div>
+        <div class="map"><img class="map__img" src="./resources/images/map.jpg"/>
+          <div class="map__triangle"></div>
+        </div>
+      </footer>
+    </div>
     <script src="./all.js"></script>
   </body>
 </html>

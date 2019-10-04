@@ -1,0 +1,99 @@
+@import '../../main.scss';
+
+.deliveryBg{
+  height: 841px;
+  background: url('./resources/images/delivery.jpg') no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include md(height, auto);
+}
+
+.delivery{
+  @include wrapper();
+  width: 100%;
+  background: rgba(255, 255, 255, 0.88);
+  padding: 50px 15px;
+  text-align: right;
+
+  @include md-block{
+    text-align: center;
+  }
+
+  &__title{
+    font-size: 36px;
+    color: #4F4F4F;
+    margin-bottom: 30px;
+    display: inline-block;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 30px;
+    margin-right: 65px;
+
+    @include xs-block{
+      text-transform: uppercase;
+      margin-right: auto;
+      margin-bottom: 20px;
+    }
+
+    &:after{
+      content: '';
+      height: 3px;
+      width: 100%;
+      background-color: $accent;
+      display: block;
+      margin-top: 5px;
+    }
+  }
+}
+
+.deliveryBox{
+  color: #4F4F4F;
+  display: flex;
+  justify-content: flex-end;
+  @include size(8);
+  @include size-md(12);
+  @include shift-left(4);
+  @include shift-md-left(0);
+
+  @include md(align-items, center);
+
+  @include xs-block{
+    flex-direction: column-reverse;
+  }
+
+  &__title{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  &__content{
+    font-size: 14px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    border-bottom: 1px solid #E2E2E4;
+    flex-grow: 1;
+    span{
+      font-weight: 700;
+    }
+  }
+
+  &__icon{
+    margin-left: 15px;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+
+    @include xs-block{
+      margin-left: 0;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+

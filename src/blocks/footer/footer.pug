@@ -1,0 +1,39 @@
+footer.footer
+  .footerInner   
+    .footer-row
+      .footer-main-menu
+        a.footer-main-menu__link(href="") Оптовикам
+        a.footer-main-menu__link(href="") Доставка
+        a.footer-main-menu__link(href="") Как купить
+        a.footer-main-menu__link(href="") Контакты
+        
+      .footer-data
+        .footer-phones
+          svg.footer-phones__icon
+            use(href='./resources/images/sprite.svg#phone')
+          .phones__data +7-702-345-49-69 +7-701-492-26-04
+        .footer-place
+          svg.footer-place__icon
+            use(href='./resources/images/sprite.svg#place')
+          .place__data ул. Волочаевская 5/6 авторынок “Орбита” 
+            br 
+            | Пн-Сб 9:00-17:00 Вс - Вых.
+
+      .footerMap-box
+        img.footer-map(src='./resources/images/map.jpg')
+
+
+    .footer-social
+      a.footer-social__link
+        svg.footer-social__icon.footer-social__icon_instagram
+          use(href='./resources/images/brands.svg#instagram')
+      a.footer-social__link
+        svg.footer-social__icon.footer-social__icon_viber
+          use(href='./resources/images/brands.svg#viber')
+      a.footer-social__link
+        svg.footer-social__icon.footer-social__icon_whatsapp
+          use(href='./resources/images/brands.svg#whatsapp')
+
+  .map
+    img.map__img(src='./resources/images/map.jpg')
+    .map__triangle

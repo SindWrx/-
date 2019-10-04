@@ -1,0 +1,110 @@
+@import '../../main.scss';
+
+.slider {
+  position: relative;
+  height: 814px;
+  display: flex;
+  justify-content: center;
+
+  @include lg-block{
+    height: 600px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  @include md-block{
+    height: 400px;
+  }
+  
+  @include xs-block{
+    height: 300px;
+  }
+}
+
+.slider__title{
+  text-align: center;
+  font-size: 100px;
+  font-weight: 800;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  margin: auto;
+  color: #fff;
+  z-index: 100;
+  height: fit-content;
+
+  @include md-block{
+    font-size: 60px;
+  }
+
+  @include xs-block{
+    font-size: 35px;
+  }
+
+  span{
+    background-color: $accent;
+  }
+}
+
+.slider__item {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 1s;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  &-img{
+    height: 814px;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+
+    @include lg-block{
+      height: 600px;
+    }
+    @include md-block{
+      height: 400px;
+    }
+    @include xs-block{
+      height: 300px;
+    }
+  }
+}
+
+.slider__dots{
+  position: absolute;
+  bottom: 0; 
+  z-index: 100;
+  margin-bottom: 58px;
+
+  @include xs(margin-bottom, 20px);
+}
+
+.dot{
+  border-radius: 50%;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: 5px;
+  display: inline-block;
+  cursor: pointer;
+
+  @include xs-block{
+    width: 15px;
+    height: 15px;
+  }
+
+  &_active{
+    background-color: $accent;
+  }
+}
+
+.visible {
+  opacity: 1;
+  z-index: 2;
+}

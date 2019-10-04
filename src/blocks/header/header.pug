@@ -1,0 +1,139 @@
+header.header
+  .header-row
+    .main-menu
+      a.main-menu__link(href="") Оптовикам
+      a.main-menu__link(href="") Доставка
+      a.main-menu__link(href="") Как купить
+      a.main-menu__link(href="") Контакты
+    
+    .mobile-main-menu
+      .menu__icon
+        span
+        span
+        span
+      .mobile-main-menu__body
+        a.mobile-main-menu__link(href="") Оптовикам
+        a.mobile-main-menu__link(href="") Доставка
+        a.mobile-main-menu__link(href="") Как купить
+        a.mobile-main-menu__link(href="") Контакты
+    
+    .social
+      a.social__link
+        svg.social__icon.social__icon_instagram
+          use(href='./resources/images/brands.svg#instagram')
+        svg(style='width:0;height:0;position:absolute;', aria-hidden='true', focusable='false')
+          lineargradient#insta-gradient(x2='1', y2='1')
+            stop(offset='0%', stop-color='#AA65D5')
+            stop(offset='50%', stop-color='#FB3784')
+            stop(offset='100%', stop-color='#FF7847')
+      a.social__link
+        svg.social__icon.social__icon_viber
+          use(href='./resources/images/brands.svg#viber')
+      a.social__link
+        svg.social__icon.social__icon_whatsapp
+          use(href='./resources/images/brands.svg#whatsapp')
+    
+    form.search(action="")
+      input.search__field(type="search", name="search" placeholder="Поиск...")
+      button.search__button(type="submit")
+        svg.search__icon
+          use(href='./resources/images/sprite.svg#search')
+        
+    .cart
+      .cart__icon-box
+        p.cart__counter 0
+        svg.cart__icon
+          use(href='./resources/images/sprite.svg#cart')
+
+    .cart-empty
+      .close-block
+        p.close-block__line
+        p.close-block__line
+      .cart-empty__data К сожалению, ваша корзина пуста. Нажмите “перейти к каталогу” и заказывайте нужные вам товары.
+      a.button Перейти к каталогу
+
+    .cart-full
+      .close-block
+        p.close-block__line
+        p.close-block__line
+      .cart-full__title Моя корзина
+
+      .cart-items
+        .cart-item
+          .cart-item__data
+            .cart-item__name Сальник 15х20х6
+            .cart-item__price 1200тг  х  1шт.
+          svg.cart-item__delete
+            use(href='./resources/images/sprite.svg#delete') 
+        .cart-item
+          .cart-item__data
+            .cart-item__name Сальник 15х20х6
+            .cart-item__price 1200тг  х  1шт.
+          svg.cart-item__delete
+            use(href='./resources/images/sprite.svg#delete') 
+
+      hr.cart-full__line
+      .cart-full__count Товаров в корзине: 4 шт.  
+      .cart-full__total Сумма заказа: 4800тг.  
+      hr.cart-full__line
+
+      a.button Перейти в корзину
+
+  .header-row
+    svg.logo
+      use(href='./resources/images/sprite.svg#logo')
+    .phones
+      svg.phones__icon
+        use(href='./resources/images/sprite.svg#phone')
+      .phones__data +7-702-345-49-69 
+        br 
+        | +7-701-492-26-04
+    .worktime
+      svg.worktime__icon
+        use(href='./resources/images/sprite.svg#time')
+      .worktime__data Пн-Сб 9:00-17:00
+        br
+        | Вс - Вых.
+    .place
+      svg.place__icon
+        use(href='./resources/images/sprite.svg#place')
+      .place__data ул. Волочаевская 5/6 
+        br
+        | авторынок “Орбита”
+    .catalog
+      .catalog__data Каталог
+      .catalog__icon
+        span
+        span
+        span
+
+    .catalog-window
+      .close-block
+        p.close-block__line
+        p.close-block__line
+      .catalog-window__title Каталог
+      .catalog-window__item
+        .catalog-category(href='')
+          .catalog-category__title Сальники
+          .icon-arrow
+            span.icon-arrow__line
+            span.icon-arrow__line  
+        .catalog-subcategories
+          a.catalog-subcategories__item Lorem ipsum
+          a.catalog-subcategories__item Lorem ipsum dolor
+          a.catalog-subcategories__item Lorem
+        hr.catalog__line
+        
+        .catalog-category(href='')
+          .catalog-category__title гидравлические уплотнения (манжеты)
+          .icon-arrow
+            span.icon-arrow__line
+            span.icon-arrow__line
+        .catalog-subcategories
+          a.catalog-subcategories__item манжеты полиуретан
+          a.catalog-subcategories__item манжеты резиновые
+          a.catalog-subcategories__item манжеты шевронные
+          a.catalog-subcategories__item манжеты полиуретан
+          a.catalog-subcategories__item манжеты резиновые
+          a.catalog-subcategories__item манжеты шевронные
+        hr.catalog__line
