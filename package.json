@@ -35,7 +35,7 @@
     "gulp.spritesmith": "^6.11.0",
     "merge-stream": "^2.0.0",
     "node-normalize-scss": "^8.0.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "normalize.less": "^1.0.0",
     "smart-grid": "^2.1.2",
     "webpack": "^4.40.2"
